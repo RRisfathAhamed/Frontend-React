@@ -1,0 +1,75 @@
+/* Main layout container */
+.main-layout {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 250px; /* Fixed width for the sidebar */
+  background-color: #1e0077;
+  color: aliceblue;
+  position: fixed; /* Fixes the sidebar in place */
+  top: 0;
+  left: 0;
+  height: 100%; /* Full height of the viewport */
+  padding: 15px;
+  overflow-y: auto; /* Enables vertical scrolling within the sidebar if needed */
+}
+
+/* Content area styles */
+.content {
+  margin-left: 250px; /* Creates space for the fixed sidebar */
+  padding: 20px;
+  width: calc(100% - 250px); /* Ensures the content takes the remaining width */
+  overflow-y: auto; /* Enables vertical scrolling for the content */
+  height: 100vh; /* Full viewport height */
+  box-sizing: border-box; /* Ensures padding is included in the element's width and height */
+}
+.content1 {
+  padding: 4%;
+  margin-left: 300px; /* Creates space for the fixed sidebar */
+  width: calc(100% - 300px); /* Ensures the content takes the remaining width */
+  overflow-y: auto; /* Enables vertical scrolling for the content */
+  height: 100vh; /* Full viewport height */
+  box-sizing: border-box; /* Ensures padding is included in the element's width and height */
+}
+.hiring-status-container {
+  display: flex;
+  align-items: center;
+}
+
+.hiring-status-label {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 10px; /* Adjust the gap between the label and checkbox */
+}
+
+.hiring-status-label input[type="checkbox"] {
+  margin-left: 5px; /* Adjust the space between the text and checkbox if needed */
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  width: 96%;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 200px; /* Adjust sidebar width for smaller screens */
+  }
+
+  .content {
+      margin-left: 0px; /* Adjust content margin to match the new sidebar width */
+      width: calc(100% - 200px); /* Adjust content width accordingly */
+  }
+  .content1 {
+    width: 100%; /* Ensures the content takes the remaining width */
+    margin-left:0px; /* Creates space for the fixed sidebar */
+
+  }
+}

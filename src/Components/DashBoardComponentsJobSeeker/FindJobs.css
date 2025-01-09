@@ -1,0 +1,179 @@
+.find-job-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.find-button,
+.show-results-button
+{
+  width: 75%;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #009688;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor:pointer;
+  transition: background-color 0.3s;
+}
+
+
+
+.find-button:hover,
+.show-results-button:hover {
+  background-color: #00796b;
+}
+
+.job-results {
+  margin-top: 30px;
+}
+
+.job-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.job-card {
+  width: 48%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.job-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.job-card.high-chance {
+  border-color: #4caf50;
+}
+
+.job-card.low-chance {
+  border-color: #f44336;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.status1 {
+  background-color: #e0f0e0;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+.job-details p {
+  margin: 5px 0;
+}
+
+.job-skills {
+  margin-top: 10px;
+}
+
+.skill {
+  display: inline-block;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+.apply-button1 {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.apply-button1:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.applied {
+  background-color: #cccccc;
+}
+
+
+
+
+.predicted-job-header {
+  text-align: center;
+  margin: 40px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.predicted-job-title {
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #f0f8ff;
+  animation: fadeIn 2s ease-in-out;
+}
+
+
+
+
+
+
+
+/* Add subtle animation for better user experience */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .job-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .find-button,
+  .show-results-button {
+    width: 100%;
+  }
+}

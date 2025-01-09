@@ -1,0 +1,182 @@
+/* General container styling */
+.posted-jobs-container-posted-jobs {
+  padding: 20px;
+}
+
+/* Grid layout for job cards */
+.job-grid-posted-jobs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Adjusted min-width for better mobile handling */
+  gap: 50px; /* Reduced gap for smaller screens */
+  margin: 1% 4%;
+}
+
+/* Job card styling */
+.job-card-posted-jobs {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+  overflow: hidden; /* Ensure content stays within card boundaries */
+}
+
+/* Header and badge styling */
+.job-header-posted-jobs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Skills section styling */
+.job-skills {
+  margin-top: 15px;
+}
+
+.skill {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  font-size: 0.9em;
+}
+
+/* Status badge styling */
+.status-badge-posted-jobs {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.status-badge.red {
+  background-color: #ffcccb;
+  color: #d8000c;
+}
+
+.status-badge.green {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Button group styling */
+.button-group-posted-jobs {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically on small screens */
+  align-items: flex-start; /* Align buttons to the start */
+  margin-top: 15px;
+}
+
+.applicants-btn-posted-jobs, 
+.edit-btn-posted-jobs, 
+.delete-btn-posted-jobs {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px; /* Added margin for better spacing */
+  width: 100%; /* Make buttons full-width for mobile view */
+}
+
+.applicants-btn-posted-jobs {
+  background-color: #007bff;
+  color: white;
+}
+
+.edit-btn-posted-jobs {
+  background-color: #ffc107;
+  color: black;
+}
+.edit-btn-posted-jobs:hover {
+  background-color: #d5a103;
+}
+
+.delete-btn-posted-jobs {
+  background-color: #dc3545;
+  color: white;
+}
+.delete-btn-posted-jobs:hover {
+  background-color: #ba1324;
+}
+
+/* Modal styles */
+.modal-overlay-posted-jobs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content-posted-jobs {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%; /* Adjusted width for better mobile experience */
+  max-width: 500px; /* Ensured modal doesn’t exceed a certain width */
+  z-index: 1001;
+}
+
+.modal-buttons-posted-jobs {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically on small screens */
+  margin-top: 20px;
+}
+
+.cancel-btn-posted-jobs, 
+.confirm-btn-posted-jobs {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px; /* Added margin for better spacing */
+  width: 100%; /* Make buttons full-width for mobile view */
+}
+
+.cancel-btn-posted-jobs {
+  background-color: #6c757d;
+  color: white;
+}
+
+.confirm-btn-posted-jobs {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Blur effect */
+body.modal-open-posted-jobs .posted-jobs-container-posted-jobs {
+  filter: blur(5px);
+  transition: filter 0.3s ease-out;
+}
+
+body.modal-open-posted-jobs {
+  overflow: hidden;
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 768px) {
+  .button-group-posted-jobs {
+    flex-direction: column;
+    align-items: stretch; /* Stretch buttons to full width */
+  }
+
+  .job-grid-posted-jobs {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Adjust grid columns for smaller screens */
+    gap: 20px; /* Reduce gap for smaller screens */
+    margin: 0%;
+  }
+
+  .modal-content-posted-jobs {
+    width: 95%; /* Slightly adjust modal width on very small screens */
+  }
+}

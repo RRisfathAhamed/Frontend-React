@@ -1,0 +1,128 @@
+/* Container for the layout */
+.container {
+  display: flex;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 250px;
+  background-color: #1e0077;
+  color: aliceblue;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0);
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: aliceblue;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.sidebar-item:hover {
+  background-color: #3d1fbd;
+}
+
+.sidebar-icon {
+  margin-right: 10px;
+}
+
+.sidebar-item1 {
+  color: #ff4d4d;
+  cursor: pointer;
+}
+
+/* Popup styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.popup-buttons {
+  margin-top: 15px;
+}
+
+.cancel-btn-delete,
+.confirm-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn-delete {
+  background: #ccc;
+  margin-right: 10px;
+}
+
+.cancel-btn-delete:hover {
+  background: #ccc; 
+}
+
+.confirm-btn {
+  background: #ff4d4d;
+  color: white;
+}
+
+/* Hamburger menu */
+.hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  color: rgb(0, 37, 247);
+}
+
+/* Content area */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      transform: translateX(-100%);
+      z-index: 999;
+  }
+
+  .sidebar.open {
+      transform: translateX(0);
+  }
+
+  .hamburger-menu {
+      display: block;
+  }
+
+  .content {
+      margin-left: 0;
+  }
+}

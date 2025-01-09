@@ -1,0 +1,174 @@
+.all-jobs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .job-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(50% - 10px); /* 50% width minus half of the gap */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* Include padding in width calculation */
+    display: flex;
+    flex-direction: column; /* Arrange elements vertically */
+    justify-content: space-between; /* Space out content and button */
+  }
+  
+  .job-details {
+    margin-bottom: 15px;
+   /* Allows job details to take up available space */
+  }
+  
+  .apply-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    align-self: flex-start; /* Optionally align the button to the left */
+  }
+  .apply-button:hover {
+    background-color: #0d7c11;
+    
+  }
+  
+  .apply-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .applied {
+    background-color: #cccccc;
+  }
+  
+  
+  /* Rest of the CSS remains the same */
+  
+  @media (max-width: 768px) {
+    .job-card {
+      width: 100%; /* Full width on smaller screens */
+    }
+  }
+
+.h2 {
+  color: #286ea7;
+  text-align: start;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 2.5rem; /* Large font size for h1 */
+  color: #2C3E50; /* Dark color for contrast */
+  font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+  font-weight: bold;
+  text-align: center; /* Center align the heading */
+  margin-bottom: 20px; /* Add some space below the h1 */
+  text-transform: uppercase; /* Make it uppercase for emphasis */
+}
+
+/* Style for h2 */
+h3 {
+  text-align: center;
+  font-size: 2rem; /* Slightly smaller than h1 */
+  color: #3498DB; /* Blue color to differentiate from h1 */
+  font-family: 'Roboto', sans-serif; /* Same modern sans-serif font */
+  font-weight: 600; /* Slightly less bold than h1 */
+  margin-bottom: 15px; /* Space between h2 and content */ /* Align to the left */
+  border-bottom: 2px solid #3498DB; /* Add a subtle border beneath h2 */
+  padding-bottom: 5px; /* Add some space below the border */
+}
+
+
+  
+  .job-header-alljobs {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+  
+  .job-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+  
+  .hired {
+    background-color: #ff4444;
+    color: white;
+  }
+  
+  .not-hired {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  
+  .job-skills {
+    margin-top: 15px;
+    flex-grow: 1;
+  }
+  
+  .skill {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 0.9em;
+  }
+
+.chat-link-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  text-align: center;
+  padding: 10px 20px; /* Add padding for button-like look */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-size: 1em; /* Adjust font size */
+  font-weight: bold; /* Make text bold */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+}
+
+.skills-no{
+  margin-top: 35px;
+  flex-grow: 1;
+}
+
+
+.chat-link-button:hover {
+  background-color: #0d7c11; /* Darker green on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.chat-link-button:active {
+  background-color: #0b5e0e; /* Even darker green when clicked */
+  transform: translateY(2px); /* Simulate button press */
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .job-card {
+      width: 100%;
+    }
+  }

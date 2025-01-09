@@ -1,0 +1,78 @@
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .generate-feedback-button,
+  .clear-feedback-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .generate-feedback-button:disabled,
+  .clear-feedback-button:disabled {
+    background-color: #9E9E9E;
+    cursor: not-allowed;
+  }
+  
+  .clear-feedback-button {
+    background-color: #f44336;
+  }
+  
+  .clear-feedback-button:hover {
+    background-color: #e53935;
+  }
+  
+  .generate-feedback-button:hover:not(:disabled) {
+    background-color: #45a049;
+  }
+  
+  .error-message {
+    color: red;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  .feedback-output {
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .feedback-output h1,
+  .feedback-output h2,
+  .feedback-output h3 {
+    margin-top: 0;
+  }
+  
+  @media (max-width: 600px) {
+    .feedback-container {
+      padding: 10px;
+    }
+  
+    .generate-feedback-button,
+    .clear-feedback-button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  
+    .feedback-output {
+      font-size: 14px;
+      padding: 15px;
+    }
+  }

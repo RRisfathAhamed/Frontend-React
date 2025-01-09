@@ -1,0 +1,41 @@
+/* Main layout container */
+.main-layout {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 250px; /* Fixed width for the sidebar */
+  background-color: #1e0077;
+  color: aliceblue;
+  position: fixed; /* Fixes the sidebar in place */
+  top: 0;
+  left: 0;
+  height: 100%; /* Full height of the viewport */
+  padding: 15px;
+  overflow-y: auto; /* Enables vertical scrolling within the sidebar if needed */
+}
+
+/* Content area styles */
+.content {
+  margin-left: 250px; /* Creates space for the fixed sidebar */
+  padding: 20px;
+  width: calc(100% - 250px); /* Ensures the content takes the remaining width */
+  overflow-y: auto; /* Enables vertical scrolling for the content */
+  height: 100vh; /* Full viewport height */
+  box-sizing: border-box; /* Ensures padding is included in the element's width and height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 200px; /* Adjust sidebar width for smaller screens */
+  }
+
+  .content {
+      margin-left: 0px; /* Adjust content margin to match the new sidebar width */
+      width: calc(100% - 200px); /* Adjust content width accordingly */
+  }
+}

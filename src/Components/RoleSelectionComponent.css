@@ -1,0 +1,97 @@
+.role-selection-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .role-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .role-option {
+    background-color: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .role-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+    display: block;
+  }
+  
+  .role-option h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #495057;
+  }
+  
+  .role-option p {
+    color: #6c757d;
+  }
+  
+  .create-account-btn {
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #042242;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .login-account-btn {
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #044939;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-account-btn:hover {
+    background-color: #0056b3;
+  }
+  .login-account-btn:hover {
+    background-color: #15a37e;
+  }
+  
+  .illustration {
+    margin-top: 50px;
+    /* Add styles for your illustration */
+  }
+  
+  @media (max-width: 768px) {
+    .role-options {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .role-option {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
